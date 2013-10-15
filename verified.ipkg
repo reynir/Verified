@@ -1,0 +1,5 @@
+package verified
+
+sourcedir = src
+modules = Verified.Functor, Verified.Functor.Maybe,
+          Verified.Algebra.Bool, Verified.Algebra.Nat
