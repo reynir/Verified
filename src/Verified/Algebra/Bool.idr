@@ -1,4 +1,4 @@
-module Prelude.VerifiedAlgebra.Bool
+module Verified.Algebra.Bool
 
 import Prelude.Algebra
 
