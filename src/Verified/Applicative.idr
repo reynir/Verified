@@ -1,0 +1,12 @@
+module Verified.Applicative
+
+class Applicative f => VerifiedApplicative (f : Type -> Type) where
+  applicativeMap : (x : f a) -> (g : a -> b) ->
+                   map g x = pure g <$> x
+  applicativeIdentity : (x : f a) -> pure id <$> x = x
+  applicativeComposition : (x : f a) -> (g1 : f (a -> b)) -> (g2 : f (b -> c)) ->
+                           ((pure (.) <$> g2) <$> g1) <$> x = g2 <$> (g1 <$> x)
+  applicativeHomomorphism : {a, b : Type} -> (x : a) -> (g : a -> b) ->
+                            pure g <$> pure x = pure (g x)
+  applicativeInterchange : (x : a) -> (g : f (a -> b)) ->
+                           g <$> pure x = pure ($ x) <$> g

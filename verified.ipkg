@@ -2,4 +2,6 @@ package verified
 
 sourcedir = src
 modules = Verified.Functor, Verified.Functor.Maybe, Verified.Functor.List,
-          Verified.Algebra.Bool, Verified.Algebra.Nat
+          Verified.Functor.Vect, Verified.Functor.Either,
+          Verified.Algebra.Bool, Verified.Algebra.Nat,
+          Verified.Applicative, Verified.Applicative.Maybe
