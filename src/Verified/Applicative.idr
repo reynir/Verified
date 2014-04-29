@@ -9,4 +9,4 @@ class Applicative f => VerifiedApplicative (f : Type -> Type) where
   applicativeHomomorphism : (x : a) -> (g : a -> b) ->
                             (<$>) {f} (pure g) (pure x) = pure {f} (g x)
   applicativeInterchange : (x : a) -> (g : f (a -> b)) ->
-                           g <$> pure x = pure ($ x) <$> g
+                           g <$> pure x = pure (\g' : a -> b => g' x) <$> g
