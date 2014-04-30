@@ -1,5 +1,7 @@
 module Verified.Algebra.Nat
 
+%default total
+
 fromAdditive : Additive -> Nat
 fromAdditive (getAdditive n) = n
 

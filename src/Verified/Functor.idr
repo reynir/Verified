@@ -1,5 +1,7 @@
 module Verified.Functor
 
+%default total
+
 class Functor f => VerifiedFunctor (f : Type -> Type) where
   functorIdentity : {a : Type} -> (x : f a) -> map id x = id x
   functorComposition : {a : Type} -> {b : Type} -> (x : f a) ->

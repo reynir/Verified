@@ -2,6 +2,8 @@ module Verified.Algebra.Bool
 
 import Prelude.Algebra
 
+%default total
+
 instance Semigroup Bool where
   (<+>) = (||)
 

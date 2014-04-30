@@ -1,5 +1,7 @@
 module Verified.Applicative
 
+%default total
+
 class Applicative f => VerifiedApplicative (f : Type -> Type) where
   applicativeMap : (x : f a) -> (g : a -> b) ->
                    map g x = pure g <$> x
