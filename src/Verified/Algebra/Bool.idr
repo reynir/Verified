@@ -8,10 +8,10 @@ instance Semigroup Bool where
   (<+>) = (||)
 
 instance VerifiedSemigroup Bool where
-  semigroupOpIsAssociative True True r = refl
-  semigroupOpIsAssociative True False True = refl
-  semigroupOpIsAssociative True False False = refl
-  semigroupOpIsAssociative False c r = refl
+  semigroupOpIsAssociative True _ _ = refl
+  semigroupOpIsAssociative False True _ = refl
+  semigroupOpIsAssociative False False True = refl
+  semigroupOpIsAssociative False False False = refl
 
 instance Monoid Bool where
   neutral = False
