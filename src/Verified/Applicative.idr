@@ -1,8 +1,10 @@
 module Verified.Applicative
 
+import Verified.Functor
+
 %default total
 
-class Applicative f => VerifiedApplicative (f : Type -> Type) where
+class (Applicative f, VerifiedFunctor f) => VerifiedApplicative (f : Type -> Type) where
   applicativeMap : (x : f a) -> (g : a -> b) ->
                    map g x = pure g <$> x
   applicativeIdentity : (x : f a) -> pure id <$> x = x

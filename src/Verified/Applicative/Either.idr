@@ -1,6 +1,7 @@
 module Verified.Applicative.Either
 
 import Verified.Applicative
+import Verified.Functor.Either
 
 instance VerifiedApplicative (Either a) where
   applicativeMap (Left _) _ = refl
