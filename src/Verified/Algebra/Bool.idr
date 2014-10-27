@@ -5,7 +5,8 @@ import Prelude.Algebra
 %default total
 
 instance Semigroup Bool where
-  (<+>) = (||)
+  -- Laziness intereferes with the types
+  (<+>) = \b1, b2 => b1 || b2
 
 instance VerifiedSemigroup Bool where
   semigroupOpIsAssociative True _ _ = Refl
