@@ -4,8 +4,8 @@ import Verified.Monad
 import Verified.Applicative.Either
 
 instance VerifiedMonad (Either e) where
-  monadLeftIdentity _ _ = refl
-  monadRightIdentity (Left _) = refl
-  monadRightIdentity (Right _) = refl
-  monadAssociativity (Left _) f g = refl
-  monadAssociativity (Right _) f g = refl
+  monadLeftIdentity _ _ = Refl
+  monadRightIdentity (Left _) = Refl
+  monadRightIdentity (Right _) = Refl
+  monadAssociativity (Left _) f g = Refl
+  monadAssociativity (Right _) f g = Refl

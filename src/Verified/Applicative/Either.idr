@@ -4,14 +4,14 @@ import Verified.Applicative
 import Verified.Functor.Either
 
 instance VerifiedApplicative (Either a) where
-  applicativeMap (Left _) _ = refl
-  applicativeMap (Right _) _ = refl
-  applicativeIdentity (Left _) = refl
-  applicativeIdentity (Right _) = refl
-  applicativeComposition x g1 (Left _) = refl
-  applicativeComposition x (Left _) (Right _) = refl
-  applicativeComposition (Left x) (Right _) (Right _) = refl
-  applicativeComposition (Right _) (Right _) (Right _) = refl
-  applicativeHomomorphism x g = refl
-  applicativeInterchange x (Left _) = refl
-  applicativeInterchange x (Right _) = refl
+  applicativeMap (Left _) _ = Refl
+  applicativeMap (Right _) _ = Refl
+  applicativeIdentity (Left _) = Refl
+  applicativeIdentity (Right _) = Refl
+  applicativeComposition x g1 (Left _) = Refl
+  applicativeComposition x (Left _) (Right _) = Refl
+  applicativeComposition (Left x) (Right _) (Right _) = Refl
+  applicativeComposition (Right _) (Right _) (Right _) = Refl
+  applicativeHomomorphism x g = Refl
+  applicativeInterchange x (Left _) = Refl
+  applicativeInterchange x (Right _) = Refl
