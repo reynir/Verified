@@ -3,7 +3,7 @@ package verified
 sourcedir = src
 modules = Verified.Functor, Verified.Functor.Maybe, Verified.Functor.List,
           Verified.Functor.Vect, Verified.Functor.Either,
-          Verified.Algebra.Bool, Verified.Algebra.Nat,
+          Verified.Algebra.Bool, Verified.Algebra.Nat, Verified.Algebra.List,
           Verified.Applicative, Verified.Applicative.Maybe,
           Verified.Applicative.Either,
           Verified.Monad, Verified.Monad.Maybe,  Verified.Monad.Either
