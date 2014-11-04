@@ -4,6 +4,9 @@ import Verified.Monad
 import Verified.Applicative.Either
 
 instance VerifiedMonad (Either e) where
+  monadApplicative (Left _) mx = Refl
+  monadApplicative (Right _) (Left _) = Refl
+  monadApplicative (Right _) (Right _) = Refl
   monadLeftIdentity _ _ = Refl
   monadRightIdentity (Left _) = Refl
   monadRightIdentity (Right _) = Refl

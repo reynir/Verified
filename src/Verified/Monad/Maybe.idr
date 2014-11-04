@@ -4,6 +4,10 @@ import Verified.Monad
 import Verified.Applicative.Maybe
 
 instance VerifiedMonad Maybe where
+  monadApplicative Nothing Nothing = Refl
+  monadApplicative Nothing (Just x) = Refl
+  monadApplicative (Just f) Nothing = Refl
+  monadApplicative (Just f) (Just x) = Refl
   monadLeftIdentity x f = Refl
   monadRightIdentity (Just x) = Refl
   monadRightIdentity Nothing = Refl
