@@ -1,5 +1,6 @@
 module Verified.Functor.Vect
 
+import Data.Vect
 import Verified.Functor
 
 instance VerifiedFunctor (Vect n) where
