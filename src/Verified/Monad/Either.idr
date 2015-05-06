@@ -1,6 +1,7 @@
 module Verified.Monad.Either
 
 import Verified.Monad
+import Verified.Applicative
 import Verified.Applicative.Either
 
 instance VerifiedMonad (Either e) where

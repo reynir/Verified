@@ -1,5 +1,6 @@
 module Verified.Algebra.Bool
 
+import Classes.Verified
 import Prelude.Algebra
 
 %default total

@@ -1,6 +1,7 @@
 module Verified.Applicative.Maybe
 
 import Verified.Applicative
+import Verified.Functor
 import Verified.Functor.Maybe
 
 instance VerifiedApplicative Maybe where

@@ -1,5 +1,7 @@
 module Verified.Algebra.Nat
 
+import Classes.Verified
+
 %default total
 
 fromAdditive : Additive -> Nat

@@ -1,5 +1,6 @@
 module Verified.Monad.Maybe
 
+import Verified.Applicative
 import Verified.Monad
 import Verified.Applicative.Maybe
 
