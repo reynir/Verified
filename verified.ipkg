@@ -6,5 +6,5 @@ modules = Verified.Algebra.Bool, Verified.Algebra.Nat,
           Verified.Functor, Verified.Functor.Maybe, Verified.Functor.List,
           Verified.Functor.Vect, Verified.Functor.Either,
           Verified.Applicative, Verified.Applicative.Maybe,
-          Verified.Applicative.Either,
+          Verified.Applicative.Either, Verified.Applicative.Vect,
           Verified.Monad, Verified.Monad.Maybe,  Verified.Monad.Either
